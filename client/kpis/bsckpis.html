@@ -1,0 +1,12 @@
+<template name="bsckpis">
+{{#if show}}
+	<div class="bsckpis">
+		<h1> KPIs </h1>
+		<button id="newKpiForm">new kpi</button>
+		<hr />
+		{{#each kpis}}
+			{{> kpi}}
+		{{/each}}
+	</div>
+{{/if}}
+</template>
