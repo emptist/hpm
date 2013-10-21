@@ -2,7 +2,9 @@
 {{#if show}}
 	<div class="bsckpis">
 		<h1> KPIs </h1>
-		<button id="newKpiForm">new kpi</button>
+		{{#if showButtons}}
+		<button id="newKpiForm" class="btn btn-warning">new kpi</button>
+		{{/if}}
 		<hr />
 		{{#each kpis}}
 			{{> kpi}}

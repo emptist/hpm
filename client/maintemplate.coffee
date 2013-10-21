@@ -6,3 +6,5 @@ Template.main.events
 
 		e.preventDefault()
 
+Template.main.adminLoggedIn = ->
+	share.adminLoggedIn()

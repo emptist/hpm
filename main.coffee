@@ -3,6 +3,7 @@
 	
 share.KPIs = @KPIs
 share.Hospitals = @Hospitals 
+
 # supadmin is admin for the whole service of all hospitals
 supadmins = ['j@k.com']
 admins = ['h@l.com']
@@ -17,3 +18,6 @@ share.supadminLoggedIn = ->
 share.adminLoggedIn = -> 
 	currentUser() in admins
  #is "jshare.k.com"
+share.showAsEditMode = -> # causing exeptions
+	true #Session.get "showButtons"
+	

@@ -1,9 +1,11 @@
 <template name="main">
   {{loginButtons}}
   {{> header}}
+  {{#if adminLoggedIn}}
   <div id="man" class= "row-fluid" >
 	  {{> newKpiForm}}
 	  {{> bsckpis}}
 	  {{> hospitals}}
   </div>
+  {{/if}}
 </template>

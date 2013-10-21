@@ -34,3 +34,4 @@ HPMRouter = Backbone.Router.extend
 Meteor.startup -> # 开始历史记录
 	new HPMRouter
 	Backbone.history.start pushState: true
+

@@ -8,8 +8,10 @@
 			<li>depts: {{depts}}</li>
 			<li>createdOn: {{createdOn}}</li>
 		</ul>
-		<button id="editKpiForm">Edit</button> 
-		<button id="removeKPI">Remove</button> 
+		{{#if showButtons}}
+		<button id="editKpiForm" class="btn btn-info btn-xs">Edit</button> 
+		<button id="removeKPI" class="btn btn-danger btn-xs">Remove</button>
+		{{/if}} 
 	</article>
 	<hr />
 </template>

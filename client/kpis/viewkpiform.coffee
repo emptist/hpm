@@ -1,3 +1,6 @@
+Template.viewKpiForm.showButtons =->
+	share.showAsEditMode()
+
 Template.viewKpiForm.events
 	
 	'click #editKpiForm':(e,t) ->

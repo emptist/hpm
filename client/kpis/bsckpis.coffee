@@ -1,5 +1,8 @@
 Template.bsckpis.show = ->
-	(share.isViewing "bsckpis") or share.isViewing "perspective"
+	(share.isViewing "bsckpis") or (share.isViewing "perspective")
+
+Template.bsckpis.showButtons = ->
+	share.showAsEditMode()
 
 Template.bsckpis.events
 	'click #newKpiForm': ->
