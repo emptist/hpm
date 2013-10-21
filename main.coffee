@@ -6,7 +6,7 @@ share.Hospitals = @Hospitals
 
 # supadmin is admin for the whole service of all hospitals
 supadmins = ['j@k.com']
-admins = ['h@l.com']
+admins = ['h@l.com','y@u.com']
 admins.push s for s in supadmins
 
 currentUser = ->
