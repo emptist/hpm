@@ -1,37 +1,10 @@
-Meteor.subscribe "bsckpisChannel"
-Meteor.subscribe "hospitalsChannel"
-logSet = (a,b) ->
-	r = Session.set a, b
-	share.consolelog "#{a} now is #{b}"
-	r
+Template.main.events 
+	'click a[href^= "/" ]' : (e,t) ->
+		pn = e.currentTarget.pathname
+		# share.consolelog  "clicked #{decodeURI pn}"
+		Backbone.history.navigate decodeURI(pn), true
 
-HPMRouter = Backbone.Router.extend
-	routes: # ! this order matters ! stupid!!
-		"": "main"
-		"bsckpis": "bsckpis"
-		"hospitals": "hospitals" 
-		"newKpiForm": "newKpiForm"
-		":perspective": "perspective" #for viewing  a single kpi item
-		
-	main: ->
-		logSet "currentView","main"
-	
-	bsckpis: ->
-		logSet "currentView","bsckpis"	
-	
-	hospitals: ->
-		logSet "currentView", "hospitals"
+		e.preventDefault()
 
-	newKpiForm: -> 
-		logSet "currentView", "newKpiForm"
-	
-	perspective: (perspective) ->
-		logSet "currentView", "perspective"
-		logSet "currentKPI",  decodeURI perspective
-		# share.consolelog "perspective #{Session.get "currentKPI"}"
-	
-
-Meteor.startup -> # 开始历史记录
-	new HPMRouter
-	Backbone.history.start pushState: true
-
+Template.main.adminLoggedIn = ->
+	share.adminLoggedIn()

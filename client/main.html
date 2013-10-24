@@ -1,5 +1,9 @@
 <template name="main">
-  {{loginButtons}}
+	<ul class="nav pull-right">
+		<li>
+			{{loginButtons}}
+		</li>
+	</ul>
   {{> header}}
   {{#if adminLoggedIn}}
   <div id="man" class= "row-fluid" >

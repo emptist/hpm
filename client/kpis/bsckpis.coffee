@@ -10,7 +10,7 @@ Template.bsckpis.events
 
 Template.bsckpis.kpis = ->
 	if share.isViewing "perspective"
-		share.KPIs.find perspective: Session.get "currentKPI"
+		share.KPIs.find perspective: Session.get "currentPerspective" 
 	else
 		share.KPIs.find {}, sort:{perspective: -1, category: -1, title: -1}
 
