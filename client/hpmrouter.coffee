@@ -11,6 +11,7 @@ HPMRouter = Backbone.Router.extend
 		"bsckpis": "bsckpis"
 		"hospitals": "hospitals" 
 		"newKpiForm": "newKpiForm"
+		"newHospitalForm": "newHospitalForm"
 		":perspective": "perspective" # 查看单个维度
 		":hospitalClass": "hospitalClass" # 查看单个医院级别
 		
@@ -26,6 +27,9 @@ HPMRouter = Backbone.Router.extend
 	newKpiForm: -> 
 		logSet "currentView", "newKpiForm"
 
+	newHospitalForm: -> 
+		logSet "currentView", "newHospitalForm"
+	
 	hospitalClass: (hospitalClass)->
 		logSet "currentView", "hospitalClass"
 		logSet "currentHopitalClass", decodeURI hospitalClass
