@@ -3,9 +3,9 @@ Template.header.rendering = ->
 
 Template.header.currentMode = ->
 	(if share.showAsEditMode()
-		"Print Mode"
+		"打印模式"
 	else
-		"Edit  Mode")
+		"編輯模式")
 		
 Template.header.adminLoggedIn = ->
 	share.adminLoggedIn()
