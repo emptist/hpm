@@ -1,4 +1,4 @@
 Template.hospital.editting = ->
-	Session.get "editting #{@._id}"
+	share.consolelog Session.get "editting #{@._id}"
 
 

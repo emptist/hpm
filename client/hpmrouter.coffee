@@ -9,11 +9,12 @@ HPMRouter = Backbone.Router.extend
 	routes: # ! this order matters ! stupid!!
 		"": "main"
 		"bsckpis": "bsckpis"
+		
 		"hospitals": "hospitals" 
 		"newKpiForm": "newKpiForm"
 		"newHospitalForm": "newHospitalForm"
-		":perspective": "perspective" # 查看单个维度
 		":hospitalClass": "hospitalClass" # 查看单个医院级别
+		":perspective": "perspective" # 查看单个维度
 		
 	main: ->
 		logSet "currentView","main"
@@ -30,14 +31,14 @@ HPMRouter = Backbone.Router.extend
 	newHospitalForm: -> 
 		logSet "currentView", "newHospitalForm"
 	
-	hospitalClass: (hospitalClass)->
-		logSet "currentView", "hospitalClass"
-		logSet "currentHopitalClass", decodeURI hospitalClass
-	
 	perspective: (perspective) ->
 		logSet "currentView", "perspective"
 		logSet "currentPerspective",  decodeURI perspective
 		# share.consolelog "perspective #{Session.get "currentPerspective"}"
+	
+	hospitalClass: (hospitalClass)->
+		logSet "currentView", "hospitalClass"
+		logSet "currentHospitalClass", decodeURI hospitalClass
 	
 
 Meteor.startup -> # 开始历史记录

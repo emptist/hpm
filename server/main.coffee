@@ -14,9 +14,15 @@ Meteor.methods
 		# return Mongodb object _id
 		if share.adminLoggedIn
 			obj.createdOn = new Date
-			share.KPIs.update title: obj.title ,
+			share.consolelog share.KPIs.update title: obj.title ,
 			#share.KPIs.insert 
 				obj, 
+				upsert: true
+	hospital:(obj)->
+		if share.adminLoggedIn
+			obj.createdOn = new Date
+			share.consolelog share.Hospitals.update title:obj.title,
+				obj,
 				upsert: true
 			
 			###
