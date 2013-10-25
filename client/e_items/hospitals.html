@@ -1,0 +1,14 @@
+<template name="hospitals">
+{{#if show}}
+	<div class="hospitals">
+		<h1> 醫院 </h1>
+		{{#if showButtons}}
+		<button id="newHospitalForm" class="btn btn-warning">添加</button>
+		{{/if}}
+		<hr />
+		{{#each hospitals}}
+			{{> hospital}}
+		{{/each}}
+	</div>
+{{/if}}  
+</template>

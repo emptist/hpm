@@ -6,5 +6,6 @@ Template.newHospitalForm.events
 		Meteor.call "hospital", 
 			share.getHospitalObj e,t
 			(err, id)->
-				Backbone.history.navigate ('/' + decodeURI t.find("#hospitalClass").value), 
+				Session.set "currentView", "hospital"
+				Backbone.history.navigate ('/' + decodeURI t.find("#title").value), 
 					true 

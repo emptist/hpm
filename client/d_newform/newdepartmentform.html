@@ -1,0 +1,14 @@
+<template name="newDepartmentForm">
+{{#if show}}
+	<div class="newDepartmentForm">
+		<!--a list of all kpis for selection /!-->
+		<input type="text" id="title"  placeholder="名稱" /> <br>
+		<ul>
+			{{#each dptkpis}}
+				{{> dptkpi}}
+			{{/each}}
+		</ul>
+		<button id="save" class="btn btn-info"> 完成 </button>
+	</div>
+{{/if}}
+</template>

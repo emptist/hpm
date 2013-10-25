@@ -1,10 +1,13 @@
 <template name="main">
+
 	<ul class="nav pull-right">
 		<li>
 			{{loginButtons}}
 		</li>
 	</ul>
+
   {{> header}}
+
   {{#if adminLoggedIn}}
   <div id="man" class= "row-fluid" >
 	  {{> newKpiForm}}
@@ -13,4 +16,5 @@
 	  {{> hospitals}}
   </div>
   {{/if}}
+
 </template>

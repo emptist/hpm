@@ -1,0 +1,14 @@
+<template name="newKpiForm">
+{{#if show}}
+	<div class="newKpiForm">
+		<input type= "text" id="perspective"  placeholder="一級維度" />
+		<input type= "text" id="category"  placeholder="二級維度" />
+		<input type="text" id="title"  placeholder="指標名稱" /> <br>
+		<input type= "text" id="definition"  placeholder="定義" />
+		<input type= "text" id="type"   placeholder="評分類型" />  
+		<input type= "text" id="mesure"   placeholder="評分方法" /> <br>
+		<input type="text" id="depts"  placeholder="適用部門" />
+		<button id="save" class="btn btn-info"> 完成 </button>
+	</div>
+{{/if}}
+</template>

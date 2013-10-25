@@ -18,7 +18,7 @@ Meteor.methods
 			#share.KPIs.insert 
 				obj, 
 				upsert: true
-	hospital:(obj)->
+	hospital: (obj)->
 		if share.adminLoggedIn
 			obj.createdOn = new Date
 			share.consolelog share.Hospitals.update title:obj.title,
