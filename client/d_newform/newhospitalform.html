@@ -1,11 +1,11 @@
 <template name="newHospitalForm">
 {{#if show}}
-	<div class="newHospitalForm">
+	<form class="newHospitalForm">
+		<input type= "text" id="province"  placeholder="省份" />
+		<input type="text" id="hospital"  placeholder="名稱" />
 		<input type= "text" id="hospitalClass"  placeholder="等级" />
 		<input type= "text" id="category"  placeholder="类型" />
-		<input type="text" id="hospital"  placeholder="名稱" /> <br>
-		<input type= "text" id="province"  placeholder="省份" />
 		<button id="save" class="btn btn-info"> 完成 </button>
-	</div>
+	</form>
 {{/if}}
 </template>

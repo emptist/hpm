@@ -1,5 +1,5 @@
 Template.editKpiForm.show = ->
-	true or share.isViewing "editKpiForm"
+	true #since this should display in place so don't use share.isViewing "editKpiForm"
 
 Template.editKpiForm.events
 	'click #save': (e,t) -> 

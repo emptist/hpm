@@ -1,5 +1,5 @@
 Template.editHospitalForm.show = ->
-	true #share.isViewing "editHospitalForm"
+	true #since this should display in place so don't use share.isViewing "editHospitalForm"
 
 Template.editHospitalForm.events
 	'click #save': (e,t) -> 

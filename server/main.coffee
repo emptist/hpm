@@ -10,6 +10,14 @@ Meteor.methods
 		if share.adminLoggedIn
 			share.KPIs.remove _id: id 
 
+	removeHospital: (id)->
+		if share.adminLoggedIn
+			share.Hospitals.remove _id: id 		
+	
+	removeDepartment: (id)->
+		if share.adminLoggedIn
+			share.Departments.remove _id: id
+
 	kpi: (obj)-> 
 		# return Mongodb object _id
 		if share.adminLoggedIn
@@ -18,6 +26,14 @@ Meteor.methods
 			#share.KPIs.insert 
 				obj, 
 				upsert: true
+				
+	department: (obj)->
+		if share.adminLoggedIn
+			obj.createdOn = new Date
+			share.consolelog share.Departments.update department: obj.department,
+				obj,
+				upsert: true
+
 	hospital: (obj)->
 		if share.adminLoggedIn
 			obj.createdOn = new Date
@@ -25,9 +41,6 @@ Meteor.methods
 				obj,
 				upsert: true
 	
-	removeHospital: (id)->
-		if share.adminLoggedIn
-			share.Hospitals.remove _id: id 		
 			###
 			share.KPIs.insert {# <- 必须用大括号才能简写以下代码
 				content#:content

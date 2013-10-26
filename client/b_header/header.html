@@ -1,4 +1,9 @@
 <template name="header">
+<ul class="nav pull-right">
+		<li>
+			{{loginButtons}}
+		</li>
+	</ul>
 <a class="brand" href="/"> JK </a>
 <h1><a href='/'> 醫院績效管理 HPMSYSTEM </a></h1>
 {{#if adminLoggedIn}}
@@ -15,15 +20,23 @@
 		醫院
 	</button>
 
-	
 	<button id="newHospitalForm" class="btn btn-warning" "navbar-btn">
 		添加醫院
 	</button>
-		
+	
+
+	<button id="departments" class="btn btn-info" "navebar-btn">
+		Depts
+	</button>
+
+	<button id="newDepartmentForm" class="btn btn-warning" "navebar-btn">
+		添加Dept
+	</button>
+
+	
 	<button id="printable" class="btn btn-default" "navbar-btn">
 		{{currentMode}}
 	</button>
 	{{/if}}
-	<hr />
 {{/if}}
 </template>

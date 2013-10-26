@@ -10,3 +10,8 @@ Template.bsckpis.kpis = ->
 	else
 		share.consolelog share.KPIs.find {}, sort:{perspective: -1, category: -1, title: -1}
 
+###
+Template.bsckpis.events
+	'click #newKpiForm': ->
+		Backbone.history.navigate '/newKpiForm', true
+###

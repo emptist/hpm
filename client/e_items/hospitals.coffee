@@ -7,10 +7,10 @@ Template.hospitals.showButtons = -> # 打印模式不显示按钮
 
 
 Template.hospitals.hospitals = -> # class 三级分级 type 公立等 title 医院名
-	if share.isViewing "hospital" 
-		 	share.Hospitals.find hospital: Session.get "currentDetail"
+	if share.isViewing "hospital"
+	 	share.Hospitals.find hospital: Session.get "currentDetail"
  	else if share.isViewing "hospitalClass" 
  		share.Hospitals.find hospitalClass: Session.get "currentDetail"
 	else if share.isViewing "hospitals" 
-		share.Hospitals.find {} #, sort: {hospitalClass: -1, category: -1, hospital: -1}
+		share.Hospitals.find {}, sort: {hospitalClass: -1, category: -1, hospital: -1}
 		

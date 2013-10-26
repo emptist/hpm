@@ -1,14 +1,13 @@
 <template name="viewHospitalForm">
 	<article class="viewHospitalForm">
-		<h3>
+		<h4>
 		{{#if showButtons}}
 		<button id="removeHospital" class="btn btn-danger btn-xs"> 删 </button>
 		<button id="editHospitalForm" class="btn btn-info btn-xs"> 編 </button> 
 		{{/if}}
 
-		{{province}} {{hospital}} <a href="/hospitalClass&{{hospitalClass}}"> {{hospitalClass}} </a> {{category}}	
-		</h3> 
-		{{> departments}}
+		{{province}} <a href="/hospital&{{hospital}}">{{hospital}}</a> <a href="/hospitalClass&{{hospitalClass}}"> {{hospitalClass}} </a> {{category}}	
+		</h4>
 	</article>
-	<hr />
+	
 </template>

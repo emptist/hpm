@@ -21,11 +21,17 @@ Template.header.events
 		Backbone.history.navigate '/hospitals', true # show as hospitals page
 		#Session.set "currentView", "hospitals" # this should not be needed but navigation doesn't work
 	
+	'click #departments': -> 
+		Backbone.history.navigate '/departments', true
+
 	'click #newKpiForm': ->
 		Backbone.history.navigate '/newKpiForm', true
 
 	'click #newHospitalForm': ->
 		Backbone.history.navigate '/newHospitalForm', true
+
+	'click #newDepartmentForm': ->
+		Backbone.history.navigate '/newDepartmentForm', true
 
 	'click #printable': ->
 		b= share.showAsEditMode()
