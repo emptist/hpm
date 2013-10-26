@@ -21,10 +21,13 @@ Meteor.methods
 	hospital: (obj)->
 		if share.adminLoggedIn
 			obj.createdOn = new Date
-			share.consolelog share.Hospitals.update title:obj.title,
+			share.consolelog share.Hospitals.update hospital: obj.hospital,
 				obj,
 				upsert: true
-			
+	
+	removeHospital: (id)->
+		if share.adminLoggedIn
+			share.Hospitals.remove _id: id 		
 			###
 			share.KPIs.insert {# <- 必须用大括号才能简写以下代码
 				content#:content

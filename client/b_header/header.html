@@ -1,16 +1,29 @@
 <template name="header">
 <a class="brand" href="/"> JK </a>
-<h1><a href='/'> 醫院績效管理 </a></h1>
+<h1><a href='/'> 醫院績效管理 HPMSYSTEM </a></h1>
 {{#if adminLoggedIn}}
+	{{#if showButtons}}
 	<button id="bsckpis" class="btn btn-primary" "navbar-btn">
 		指標
 	</button>
+	
+	<button id="newKpiForm" class="btn btn-warning" "navbar-btn">
+		添加指標
+	</button>
+	
 	<button id="hospitals" class="btn btn-success" "navbar-btn">
 		醫院
 	</button>
+
+	
+	<button id="newHospitalForm" class="btn btn-warning" "navbar-btn">
+		添加醫院
+	</button>
+		
 	<button id="printable" class="btn btn-default" "navbar-btn">
 		{{currentMode}}
 	</button>
+	{{/if}}
 	<hr />
 {{/if}}
 </template>

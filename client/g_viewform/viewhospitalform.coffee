@@ -3,7 +3,7 @@ Template.viewHospitalForm.showButtons =->
 
 Template.viewHospitalForm.events
 	
-	'click #editHospitalForm':(e,t) ->
+	'click #editHospitalForm': (e,t) ->
 		share.consolelog "viewHospitalForm event editHospitalForm #{@._id}"
 		Session.set "editting #{@._id}", true #"editting #{t.data._id}", true
 	

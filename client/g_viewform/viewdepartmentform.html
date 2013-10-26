@@ -1,11 +1,11 @@
-<template name="viewHospitalForm">
-	<article class="viewHospitalForm">
+<template name="viewDepartmentForm">
+	<article class="viewDepartmentForm">
 		<h3>
 			{{province}} {{title}} <a href="/{{hospitalClass}}"> {{hospitalClass}} </a> {{category}}	
 		
 		{{#if showButtons}}
-		<button id="editHospitalForm" class="btn btn-info btn-xs"> 編輯 </button> 
-		<button id="removeHospital" class="btn btn-danger btn-xs"> 删除 </button>
+		<button id="editDepartmentForm" class="btn btn-info btn-xs"> 編輯 </button> 
+		<button id="removeDepartment" class="btn btn-danger btn-xs"> 删除 </button>
 		{{/if}}
 		</h3> 
 		{{> departments}}

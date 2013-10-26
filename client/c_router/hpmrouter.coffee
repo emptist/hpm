@@ -4,7 +4,7 @@ Meteor.subscribe "hospitalsChannel"
 
 logSet = (a,b) ->
 	r = Session.set a, b
-	share.consolelog "#{a} now is #{b}"
+	share.consolelog "now #{a} is #{b}"
 	r
 
 HPMRouter = Backbone.Router.extend
@@ -16,7 +16,7 @@ HPMRouter = Backbone.Router.extend
 		"newKpiForm": "newKpiForm"
 		"newHospitalForm": "newHospitalForm"
 		
-		":detail": "detail" # 查看单个维度
+		":detail": "detail" # 查看single object, see below
 		
 	main: ->
 		logSet "currentView","main"
@@ -33,11 +33,11 @@ HPMRouter = Backbone.Router.extend
 	newHospitalForm: -> 
 		logSet "currentView", "newHospitalForm"
 	
-	detail: (detail) ->
-		#logSet "currentView", "detail"
-		logSet "currentDetail",  decodeURI detail
-		# share.consolelog "detail #{Session.get "currentDetail"}"
-	
+	detail: (detail) -> # detail is string formatted like 'view-detail'
+		sp = detail.split '&'
+		logSet "currentView", decodeURI sp[0] # this could be everything that contains details
+		logSet "currentDetail",  decodeURI sp[1] # this leading to one detail of the viewed objected
+		
 ###
 	hospitalClass: (hospitalClass)->
 		logSet "currentView", "hospitalClass"
