@@ -1,0 +1,23 @@
+<template name="viewDepartmentKPITmpForm">
+	<article class="viewDepartmentKPITmpForm" >
+		<h4> 
+			
+			{{#if showButtons}}
+			<button id="removeDepartment" class="btn btn-danger btn-xs"> 删 </button>
+			<button id="editDepartmentForm" class="btn btn-info btn-xs"> 編 </button>
+			{{/if}} 
+		<div><input type= 'text' id="weight" placeholder = "weight" >
+		<a href="/perspective&{{perspective}}">{{perspective}}</a> {{category}} {{title}}
+		</div>		
+		</h4>
+
+	<!--	<ul>
+			<li>定義: {{definition}}</li>
+			<li>數據類型: {{type}}</li>  
+			<li>評分方法: {{mesure}}</li>
+			<li>適用科室: {{depts}}</li>
+		</ul>
+	-->	
+	</article>
+	
+</template>

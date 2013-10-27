@@ -51,6 +51,7 @@ HPMRouter = Backbone.Router.extend
 ###
 
 Meteor.startup -> # 开始历史记录
+	Session.set "showButtons",true
 	new HPMRouter
 	Backbone.history.start pushState: true
 
