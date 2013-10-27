@@ -4,6 +4,11 @@ Meteor.publish "bsckpisChannel" , ->
 Meteor.publish "hospitalsChannel" , -> 
 		share.Hospitals.find()
 
+Meteor.publish "departmentsChannel" , -> 
+		share.Departments.find()
+
+
+
 Meteor.methods
 	# kpis in four perspectives
 	removeKPI: (id)->

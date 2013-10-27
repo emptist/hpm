@@ -1,6 +1,7 @@
 # subscriptions
 Meteor.subscribe "bsckpisChannel"
 Meteor.subscribe "hospitalsChannel"
+Meteor.subscribe "departmentsChannel"
 
 Template.main.events 
 	'click a[href^= "/" ]': (e,t) ->  # means (a.href)a[href] ="/"
